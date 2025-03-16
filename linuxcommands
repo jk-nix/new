@@ -1,0 +1,11 @@
+Linux command
+
+diff -y file1 file2
+
+sudo apfs-fuse -o allow_other /dev/sdb1 /home/jk/WD/
+
+nix-collect-garbage
+ls -l /run/current-system/sw/
+ls -l /run/current-system/sw/bin/
+sudo nix-env --profile /nix/var/nix/profiles/system --delete-generations +5
+nix-shell -p filezilla
