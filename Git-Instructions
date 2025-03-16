@@ -1,0 +1,54 @@
+
+Git Instructions
+Locally:
+1) # Install git for your linux distribution
+2) # Locally from terminal navigate to your dir where you want your local git repository to be cd /path/to/your/project
+
+3) git init
+4) git status
+5) git add . (all files in current dir)
+6) git add <filename>
+7) git commit -m ""
+8) git log
+    # If not already set up private and public key
+    (ssh-keygen -t ed25519 -C "your_email@example.com")
+
+9) eval $(ssh-agent)
+10) ssh-add ~/.ssh/<private_key> (add the public_key at Github) ( type password)
+11) #copy public key to github
+cat ~/.ssh/<public_key> and copy the text to github under settings ssh
+
+Globally (Github)
+
+12) git remote add origin git@github.com:username/repository.git
+13) git remote -v
+    #Update remote url for ssh ( only needed if not set for ssh; meaning set up git remote add origin https://github.com/username/repository.git
+    git remote set-url origin git@github.com:du-wow/new.git
+14) #Check that the remote URL has been updated to use SSH:
+git remote -v
+origin  git@github.com:du-wow/new.git (fetch)
+origin  git@github.com:du-wow/new.git (push)
+)
+
+15) ssh -vvv -T git@github.com
+ssh -i ~/.ssh/my_new_key -T git@github.com
+Hi du-wow! You've successfully authenticated, but GitHub does not provide shell access.
+
+16) # Push your local changes to the repository using SSH:
+17) git push -u origin main
+
+WORK FLOW
+
+locally from terminal:
+git add filename
+or
+git add . ( all files in current dir)
+git commit -m ""
+git push -u origin main # update remotely.
+
+
+
+
+
+
+
